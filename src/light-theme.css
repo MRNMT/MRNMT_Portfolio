@@ -1,0 +1,42 @@
+/* Light Theme Variables */
+[data-theme="light"] {
+  --background: #ffffff;
+  --text-primary: #000000;
+  --text-secondary: #000000;
+  --accent: #000000;
+  --button-bg: transparent;
+  --button-border: #000000;
+  --button-hover-bg: #000000;
+  --button-hover-color: #ffffff;
+  --nav-bg: #ffffff;
+  --nav-text: #000000;
+  --nav-text-hover: #000000;
+  --section-bg: #ffffff;
+  --section-text: #000000;
+  --section-title: #000000;
+  --social-icon-color: #000000;
+  --social-icon-hover: #000000;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --font-family: 'Inter', sans-serif;
+}
+
+/* Light theme specific overrides */
+[data-theme="light"] .experience-card {
+  background: var(--section-bg);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .reference-item {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="light"] .navbar {
+  background-color: var(--nav-bg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .footer {
+  background-color: var(--nav-bg);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
