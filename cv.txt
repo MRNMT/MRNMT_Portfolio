@@ -1,27 +1,27 @@
-# Nelson Mafape Tshwarelo Madileng (MRNMT)
+Nelson Mafape Tshwarelo Madileng (MRNMT)
 
-## Contact Information
-- **Phone:** +27 764 694 671
-- **Email:** nelsonmadileng57@gmail.com
-- **LinkedIn:** https://linkedin.com/in/nelson-madileng-4b64a928b
-- **GitHub:** https://github.com/MRNMT
-- **WhatsApp:** https://wa.me/message/2YIUYPO7FQO2F1
-- **Location:** South Africa
+Contact Information
+- Phone: +27 764 694 671
+- Email: nelsonmadileng57@gmail.com
+- LinkedIn: https://linkedin.com/in/nelson-madileng-4b64a928b
+- GitHub: https://github.com/MRNMT
+- WhatsApp: https://wa.me/message/2YIUYPO7FQO2F1
+- Location: South Africa
 
-## Professional Summary
+Professional Summary
 A passionate full-stack engineer with experience in building scalable web applications and seamless user experiences. Skilled in JavaScript, React, Node.js, Python, and more, I enjoy crafting efficient and elegant solutions to complex problems. Transforming pixelated, bite-sized components into seamless digital UI/UX.
 
-## Education
-- **Tshwane University of Technology** - Computer Science (2022 - Present)
+Education
+- Tshwane University of Technology - Computer Science (2022 - Present)
 
-## Professional Experience
+Professional Experience
 
-### CodeTribe Academy / mLab
-**Full-Stack Developer Trainee & Intern**  
-*2025 - 2026*  
+CodeTribe Academy / mLab
+Full-Stack Developer Trainee & Intern
+2025 - 2026
 Completing intensive full-stack development training at CodeTribe Academy, focusing on modern web technologies and software development best practices, followed by an internship at mLab starting July 1, 2025, contributing to innovative tech projects and gaining practical experience in software development until March 31, 2026.
 
-**Key Responsibilities:**
+Key Responsibilities:
 - Developed responsive web applications using HTML, CSS, and JavaScript
 - Built full-stack applications with React, Node.js, and MongoDB
 - Implemented RESTful APIs and database integration
@@ -32,7 +32,7 @@ Completing intensive full-stack development training at CodeTribe Academy, focus
 - Participated in code reviews and team meetings
 - Learned industry best practices and tools
 
-**Technical Skills Applied:**
+Technical Skills Applied:
 - HTML5, CSS3, JavaScript (ES6+)
 - React.js, Node.js, Express.js
 - MongoDB, Firebase, RESTful APIs
@@ -43,97 +43,97 @@ Completing intensive full-stack development training at CodeTribe Academy, focus
 - Problem-solving and debugging
 - Version control (Git)
 
-### LVH 2025 Hackathon
-**Second Place Winner**  
-*2025*  
+LVH 2025 Hackathon
+Second Place Winner
+2025
 Won second place in the LVH 2025 Hackathon (Limpopo Varsity Hackathon), which was my third hackathon participation, as a Computer Science student at Tshwane University of Technology. Demonstrated advanced skills in collaborative coding, problem-solving, and innovation under time constraints.
 
-**Key Responsibilities:**
+Key Responsibilities:
 - Led a team to develop innovative solutions for given challenges
 - Applied advanced programming skills in a competitive hackathon environment
 - Demonstrated ability to work under pressure and meet deadlines
 - Learned from peers and mentors in a fast-paced setting
 - Achieved second place recognition for project excellence
 
-**Technical Skills Applied:**
+Technical Skills Applied:
 - Problem-solving and critical thinking
 - Team collaboration and communication
 - Programming languages (e.g., JavaScript, Python)
 - Time management and project planning
 - Innovation and rapid prototyping
 
-### Telkom 10x Hackathon Polokwane
-**Hacker**  
-*2025*  
+Telkom 10x Hackathon Polokwane
+Hacker
+2025
 Participated as a hacker in the Telkom 10x Hackathon held in Polokwane, showcasing skills in rapid prototyping and innovative problem-solving in a competitive environment.
 
-**Key Responsibilities:**
+Key Responsibilities:
 - Developed innovative solutions for given challenges
 - Applied programming skills in a competitive hackathon environment
 - Demonstrated ability to work under pressure and meet deadlines
 - Collaborated with team members on project development
 - Learned from peers and mentors in a fast-paced setting
 
-**Technical Skills Applied:**
+Technical Skills Applied:
 - Problem-solving and critical thinking
 - Team collaboration and communication
 - Programming languages (e.g., JavaScript, Python)
 - Time management and project planning
 - Innovation and rapid prototyping
 
-### NEC XON
-**Technical Support Specialist**  
-*2022*  
+NEC XON
+Technical Support Specialist
+2022
 Delivered comprehensive technical support for retail technology solutions at NEC XON, specializing in price tag installation and maintenance across enterprise environments. Gained hands-on experience with operational workflows and retail technology implementations.
 
-**Key Responsibilities:**
+Key Responsibilities:
 - Led price tag installation projects with precision and efficiency across retail environments
 - Provided technical support for retail technology solutions and POS systems
 - Maintained operational excellence in fast-paced enterprise environments
 - Collaborated with cross-functional teams to ensure seamless technology deployments
 - Delivered comprehensive training and support to retail staff on new systems
 
-**Technical Skills Applied:**
+Technical Skills Applied:
 - Retail technology systems and POS solutions
 - Hardware installation and configuration
 - Technical troubleshooting and support
 - Customer service and training delivery
 - Project coordination and team collaboration
 
-**Professional References:**
+Professional References:
 - Joel Phatlane: 078 389 3087
 - Nico Botha: 072 255 3393
 
-### TVH 22 Hackathon
-**Participant**  
-*2022*  
+TVH 22 Hackathon
+Participant
+2022
 Participated in the TVH 22 Hackathon as a first-year Computer Science student at Tshwane University of Technology, gaining valuable experience in collaborative coding and problem-solving under time constraints.
 
-**Key Responsibilities:**
+Key Responsibilities:
 - Collaborated with a team to develop innovative solutions for given challenges
 - Applied programming skills in a competitive hackathon environment
 - Demonstrated ability to work under pressure and meet deadlines
 - Learned from peers and mentors in a fast-paced setting
 
-**Technical Skills Applied:**
+Technical Skills Applied:
 - Problem-solving and critical thinking
 - Team collaboration and communication
 - Programming languages (e.g., JavaScript, Python)
 - Time management and project planning
 
-## Skills
+Skills
 - JavaScript / TypeScript
 - React / Next.js
 - Node.js / Express
 - Python / Django
 - SQL / NoSQL Databases
 
-## Projects
-- **Task Tracker:** A simple and efficient task tracking app for managing your to-dos. (https://task-4-4-starter-tan.vercel.app/)
-- **Converter Hub:** Multi-purpose number converter for binary, decimal, and more. (https://converter-hub-one.vercel.app/)
-- **Workshop Display:** Displays and manages workshop objects dynamically. (https://workshop-object-display-lac.vercel.app/)
+Projects
+- Task Tracker: A simple and efficient task tracking app for managing your to-dos. (https://task-4-4-starter-tan.vercel.app/)
+- Converter Hub: Multi-purpose number converter for binary, decimal, and more. (https://converter-hub-one.vercel.app/)
+- Workshop Display: Displays and manages workshop objects dynamically. (https://workshop-object-display-lac.vercel.app/)
 
-## Certifications & Achievements
+Certifications & Achievements
 - Second Place Winner, LVH 2025 Hackathon
 - Participant, Telkom 10x Hackathon Polokwane
 - Participant, TVH 22 Hackathon

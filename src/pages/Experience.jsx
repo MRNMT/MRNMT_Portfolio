@@ -208,6 +208,27 @@ const Experience = () => {
         { name: 'Firebase', level: 60 },
         { name: 'Agile/Scrum', level: 75 }
       ]
+    },
+    {
+      category: 'Academic Skills',
+      skills: [
+        { name: 'Communication for Academic Purposes', level: 52 },
+        { name: 'Computing Fundamentals A', level: 70 },
+        { name: 'Computational Mathematics', level: 77 },
+        { name: 'Life Skills', level: 72 },
+        { name: 'Information Literacy', level: 89 },
+        { name: 'Principles of Programming A', level: 82 },
+        { name: 'Computing Fundamentals B', level: 82 },
+        { name: 'Web Computing', level: 94 },
+        { name: 'Discrete Structures', level: 76 },
+        { name: 'Principles of Programming B', level: 64 },
+        { name: 'Advanced Discrete Structures', level: 62 },
+        { name: 'Computer Architecture and Organisation', level: 52 },
+        { name: 'Database Principles', level: 58 },
+        { name: 'Object Oriented Programming', level: 66 },
+        { name: 'Advanced Object Oriented Programming', level: 69 },
+        { name: 'Operating Systems', level: 77 }
+      ]
     }
   ];
 
@@ -252,24 +273,6 @@ const Experience = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <div className="stat-icon">
-                <i className="fa fa-calendar"></i>
-              </div>
-              <div className="stat-content">
-                <div className="stat-number">
-                  <AnimatedCounter end={3} />
-                  <span>+</span>
-                </div>
-                <div className="stat-label">Years Experience</div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="stat-card"
-              initial={{ opacity: 0, y: 20 }}
-              animate={countersVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <div className="stat-icon">
                 <i className="fa fa-project-diagram"></i>
               </div>
               <div className="stat-content">
@@ -285,7 +288,7 @@ const Experience = () => {
               className="stat-card"
               initial={{ opacity: 0, y: 20 }}
               animate={countersVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="stat-icon">
                 <i className="fa fa-trophy"></i>
@@ -302,7 +305,7 @@ const Experience = () => {
               className="stat-card"
               initial={{ opacity: 0, y: 20 }}
               animate={countersVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
             >
               <div className="stat-icon">
                 <i className="fa fa-medal"></i>

@@ -1,17 +1,18 @@
-# Migration to React Vite + Redux SPA
+# TODO: Remove "3+ Years Experience" from Portfolio
 
-## TODO List
+## Tasks
+- [x] Remove the "Years Experience" stat card from the stats grid in src/pages/Experience.jsx
+- [x] Adjust animation delays for the remaining stat cards (Projects Completed, Hackathons Participated, Hackathon Win) to maintain proper sequencing
+- [x] Verify the changes by running the application and checking the Experience page
 
-- [ ] Initialize Vite React project in `portfolio-react` subfolder
-- [ ] Install dependencies: React Router DOM, Redux Toolkit, React-Redux
-- [ ] Set up Redux store and slices (theme, contact)
-- [ ] Create main entry files (main.jsx, App.jsx)
-- [ ] Create shared components (Navbar, Hero)
-- [ ] Create page components (Home, About, Skills, Experience, Services, Projects, Contact, Privacy)
-- [ ] Port styles to index.css (global CSS + extracted inline styles)
-- [ ] Set up React Router for navigation
-- [ ] Port animations to React (useIntersectionObserver hook)
-- [ ] Copy assets (hero.webp to public/)
-- [ ] Update README.md for Vite setup
-- [ ] Test application (routes, animations, form, theme)
-- [ ] Build for production
+# TODO: Add Soft Skills to Experience Page
+
+## Tasks
+- [x] Add "Communication for Academic Purposes" (level 52%) as a new "Soft Skills" category in skillCategories array in src/pages/Experience.jsx
+- [x] Verify the new skill renders correctly in the skills overview section
+
+# TODO: Add Academic Skills to Experience Page
+
+## Tasks
+- [x] Add "Academic Skills" category with listed skills and levels to skillCategories array in src/pages/Experience.jsx
+- [x] Verify the new category and skills render correctly in the skills overview section

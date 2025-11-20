@@ -12,7 +12,7 @@
 A passionate full-stack engineer with experience in building scalable web applications and seamless user experiences. Skilled in JavaScript, React, Node.js, Python, and more, I enjoy crafting efficient and elegant solutions to complex problems. Transforming pixelated, bite-sized components into seamless digital UI/UX.
 
 ## Education
-- **Tshwane University of Technology** - Computer Science (Ongoing)
+- **Tshwane University of Technology** - Computer Science (2022 - Present)
 
 ## Professional Experience
 
