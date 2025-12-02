@@ -11,6 +11,7 @@ const Hero = () => {
         </p>
         <div className="hero-buttons">
           <Link to="/contact" className="btn btn-outline">Get in Touch</Link>
+          <a href="/assets/resume.pdf" download="MR-NELSON-MAFAPE-TSHWARELO-MADILENG-CV-Resume.pdf" className="btn btn-primary">Download CV</a>
           <div className="social-icons">
             <a href="https://github.com/MRNMT" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
@@ -31,7 +32,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="hero-image">
-        <img src="/hero.webp" alt="Nelson Mafape Tshwarelo Madileng (MRNMT)" />
+        <img src="/assets/nelson.jpeg" alt="Nelson Mafape Tshwarelo Madileng (MRNMT)" />
       </div>
     </section>
   );

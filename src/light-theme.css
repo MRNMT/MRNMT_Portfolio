@@ -16,6 +16,8 @@
   --section-title: #000000;
   --social-icon-color: #000000;
   --social-icon-hover: #000000;
+  --card-bg: #ffffff;
+  --border-color: rgba(0, 0, 0, 0.1);
   --shadow-color: rgba(0, 0, 0, 0.3);
   --font-family: 'Inter', sans-serif;
 }
@@ -32,11 +34,19 @@
 }
 
 [data-theme="light"] .navbar {
-  background-color: var(--nav-bg);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="light"] .footer {
   background-color: var(--nav-bg);
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .hero {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }

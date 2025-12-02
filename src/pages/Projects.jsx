@@ -65,12 +65,12 @@ const Projects = () => {
               onClick={() => openModal(project)}
               style={{
                 cursor: 'pointer',
-                background: 'var(--card-bg, #1a1a1a)',
+                background: 'var(--card-bg)',
                 padding: '1.5rem',
                 borderRadius: '10px',
                 marginBottom: '1rem',
                 transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                border: '1px solid var(--border-color, #333)',
+                border: '1px solid var(--border-color)',
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-5px)';
@@ -103,17 +103,10 @@ const Projects = () => {
                 <h4 style={{ color: 'var(--text-primary, #fff)', margin: '0 0 0.5rem 0', fontSize: '1rem' }}>Tech Stack:</h4>
                 <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                   {project.techStack.map((tech, index) => (
-                    <li
-                      key={index}
-                      style={{
-                        background: 'var(--accent, #00d4ff)',
-                        color: '#000',
-                        padding: '0.25rem 0.5rem',
-                        borderRadius: '4px',
-                        fontSize: '0.8rem',
-                      }}
-                    >
-                      {tech}
+                    <li key={index}>
+                      <span className="btn btn-sm btn-primary" style={{ padding: '0.25rem 0.6rem', borderRadius: '12px' }}>
+                        {tech}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -124,15 +117,8 @@ const Projects = () => {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{
-                      background: 'var(--accent, #00d4ff)',
-                      color: '#000',
-                      padding: '0.5rem 1rem',
-                      textDecoration: 'none',
-                      borderRadius: '5px',
-                      fontSize: '0.9rem',
-                      fontWeight: 'bold',
-                    }}
+                      className="btn btn-primary"
+                      style={{ padding: '0.5rem 1rem' }}
                   >
                     Live
                   </a>
@@ -142,15 +128,8 @@ const Projects = () => {
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{
-                      background: 'var(--bg-secondary, #2a2a2a)',
-                      color: 'var(--text-primary, #fff)',
-                      padding: '0.5rem 1rem',
-                      textDecoration: 'none',
-                      borderRadius: '5px',
-                      fontSize: '0.9rem',
-                      fontWeight: 'bold',
-                    }}
+                      className="btn btn-primary"
+                      style={{ padding: '0.5rem 1rem' }}
                   >
                     GitHub
                   </a>

@@ -367,7 +367,7 @@ const Experience = () => {
                       <h4>Skills Applied</h4>
                       <div className="skill-tags">
                         {exp.skills.map((skill, i) => (
-                          <span key={i} className="skill-tag">{skill}</span>
+                          <span key={i} className="btn btn-sm btn-primary" style={{ marginRight: '0.5rem', marginBottom: '0.25rem' }}>{skill}</span>
                         ))}
                       </div>
                     </div>
@@ -463,10 +463,10 @@ const Experience = () => {
                   <p>{project.description}</p>
                   <div className="project-tech">
                     {project.tech.map((tech, i) => (
-                      <span key={i} className="tech-badge">{tech}</span>
+                      <span key={i} className="btn btn-sm btn-primary" style={{ marginRight: '0.5rem', marginBottom: '0.25rem' }}>{tech}</span>
                     ))}
                   </div>
-                  <Link to={project.link} className="project-link">
+                  <Link to={project.link} className="btn btn-primary">
                     View Project <i className="fa fa-arrow-right"></i>
                   </Link>
                 </div>
