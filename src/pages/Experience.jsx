@@ -2,6 +2,7 @@ import { useRef, useEffect, useState } from 'react';
 import { useIntersectionObserver } from '../utils/animations';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { FaProjectDiagram, FaTrophy, FaMedal, FaArrowRight } from 'react-icons/fa';
 
 const Experience = () => {
   const sectionRef = useRef();
@@ -279,7 +280,7 @@ const Experience = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <div className="stat-icon">
-                <i className="fa fa-project-diagram"></i>
+                <FaProjectDiagram style={{ fontSize: '2.5rem', color: 'var(--accent)' }} />
               </div>
               <div className="stat-content">
                 <div className="stat-number">
@@ -297,7 +298,7 @@ const Experience = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="stat-icon">
-                <i className="fa fa-trophy"></i>
+                <FaTrophy style={{ fontSize: '2.5rem', color: 'var(--accent)' }} />
               </div>
               <div className="stat-content">
                 <div className="stat-number">
@@ -314,7 +315,7 @@ const Experience = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <div className="stat-icon">
-                <i className="fa fa-medal"></i>
+                <FaMedal style={{ fontSize: '2.5rem', color: 'var(--accent)' }} />
               </div>
               <div className="stat-content">
                 <div className="stat-number">
@@ -473,7 +474,7 @@ const Experience = () => {
                     ))}
                   </div>
                   <Link to={project.link} className="btn btn-primary">
-                    View Project <i className="fa fa-arrow-right"></i>
+                    View Project <FaArrowRight style={{ marginLeft: '0.5rem', fontSize: '1rem' }} />
                   </Link>
                 </div>
               </motion.div>

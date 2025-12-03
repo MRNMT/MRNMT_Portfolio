@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { toggleTheme } from '../store/themeSlice';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Navbar = () => {
   const theme = useTheme();
@@ -87,13 +88,13 @@ const Navbar = () => {
       <div className="navbar-actions" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
         <div className="social-links" style={{ display: 'flex', gap: '0.5rem' }}>
           <a href="https://github.com/MRNMT" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{ color: 'var(--text-primary, #fff)', fontSize: '1.2rem' }}>
-            <i className="fab fa-github"></i>
+            <FaGithub />
           </a>
           <a href="https://linkedin.com/in/nelson-madileng-4b64a928b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style={{ color: 'var(--text-primary, #fff)', fontSize: '1.2rem' }}>
-            <i className="fab fa-linkedin"></i>
+            <FaLinkedin />
           </a>
           <a href="https://x.com/Nelson08830316" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" style={{ color: 'var(--text-primary, #fff)', fontSize: '1.2rem' }}>
-            <i className="fab fa-twitter"></i>
+            <FaTwitter />
           </a>
         </div>
         <button onClick={() => dispatch(toggleTheme())} className="btn btn-outline" style={{ padding: '0.5rem 1rem' }}>

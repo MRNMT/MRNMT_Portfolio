@@ -101,7 +101,6 @@ const Projects = () => {
                 background: 'var(--card-bg)',
                 padding: '1.5rem',
                 borderRadius: '10px',
-                marginBottom: '1rem',
                 border: '1px solid var(--border-color)',
               }}
             >
@@ -125,7 +124,7 @@ const Projects = () => {
               </p>
               <div style={{ marginBottom: '1rem' }}>
                 <h4 style={{ color: 'var(--text-primary, #fff)', margin: '0 0 0.5rem 0', fontSize: '1rem' }}>Tech Stack:</h4>
-                <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '0.5rem', justifyContent: 'center' }}>
                   {project.techStack.map((tech, index) => (
                     <li key={index}>
                       <span className="btn btn-sm btn-primary" style={{ padding: '0.25rem 0.6rem', borderRadius: '12px' }}>
@@ -135,7 +134,7 @@ const Projects = () => {
                   ))}
                 </ul>
               </div>
-              <div style={{ display: 'flex', gap: '0.5rem' }}>
+              <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center' }}>
                 {project.liveLink && (
                   <a
                     href={project.liveLink}

@@ -1041,10 +1041,9 @@ a:hover {
   background: var(--section-bg);
   border: 1px solid rgba(100, 255, 218, 0.1);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 2rem;
   transition: all 0.3s ease;
   cursor: pointer;
-  margin-bottom: 1rem;
 }
 
 .project-card:hover {

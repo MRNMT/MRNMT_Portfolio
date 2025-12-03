@@ -157,15 +157,15 @@ const About = () => {
               </p>
               <div className="about-stats">
                 <div className="stat">
-                  <span className="stat-number">3</span>
+                  <span className="stat-number">3+</span>
                   <span className="stat-label">Projects Completed</span>
                 </div>
                 <div className="stat">
-                  <span className="stat-number">3+</span>
+                  <span className="stat-number">1+</span>
                   <span className="stat-label">Years Experience</span>
                 </div>
                 <div className="stat">
-                  <span className="stat-number">3</span>
+                  <span className="stat-number">1</span>
                   <span className="stat-label">Hackathon Wins</span>
                 </div>
               </div>
@@ -457,7 +457,7 @@ const About = () => {
                     <div className="service-features">
                       <h5>What's Included:</h5>
                       <ul>
-                        <li>Native iOS/Android development</li>
+                        <li>Native Android development</li>
                         <li>Cross-platform solutions</li>
                         <li>App store optimization</li>
                         <li>Push notifications and analytics</li>

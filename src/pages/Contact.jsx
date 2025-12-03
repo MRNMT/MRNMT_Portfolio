@@ -1,13 +1,11 @@
 import { useRef, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { updateFormData, setSubmitting, resetForm } from '../store/contactSlice';
 import { useIntersectionObserver } from '../utils/animations';
-import emailjs from '@emailjs/browser';
+import { useForm, ValidationError } from '@formspree/react';
+import { FaPhone, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 
 const Contact = () => {
   const sectionRef = useRef();
-  const dispatch = useDispatch();
-  const { formData, isSubmitting } = useSelector((state) => state.contact);
+  const [state, handleSubmit] = useForm("mqarbjab");
 
   useIntersectionObserver(sectionRef, (entry) => {
     if (entry.isIntersecting) {
@@ -15,30 +13,16 @@ const Contact = () => {
     }
   });
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    dispatch(updateFormData({ [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    dispatch(setSubmitting(true));
-
-    // Replace with your EmailJS credentials
-    const serviceID = 'YOUR_SERVICE_ID';
-    const templateID = 'YOUR_TEMPLATE_ID';
-    const publicKey = 'YOUR_PUBLIC_KEY';
-
-    emailjs.sendForm(serviceID, templateID, e.target, publicKey)
-      .then((result) => {
-        alert('Thank you for your message! I will get back to you soon.');
-        dispatch(resetForm());
-        dispatch(setSubmitting(false));
-      }, (error) => {
-        alert('Failed to send the message. Please try again later.');
-        dispatch(setSubmitting(false));
-      });
-  };
+  if (state.succeeded) {
+    return (
+      <main>
+        <section ref={sectionRef} className="section contact-section" id="contact">
+          <h2 className="section-title">Get In Touch</h2>
+          <p className="section-description">Thanks for your message! I'll respond as soon as possible.</p>
+        </section>
+      </main>
+    );
+  }
 
   return (
     <main>
@@ -50,21 +34,21 @@ const Contact = () => {
           <div className="contact-info">
             <div className="contact-card">
               <div className="contact-icon">
-                <i className="fa fa-phone"></i>
+                <FaPhone style={{ fontSize: '1.5rem', color: 'var(--accent)' }} />
               </div>
               <h3>Phone</h3>
               <p>+27 764 694 671</p>
             </div>
             <div className="contact-card">
               <div className="contact-icon">
-                <i className="fa fa-envelope"></i>
+                <FaEnvelope style={{ fontSize: '1.5rem', color: 'var(--accent)' }} />
               </div>
               <h3>Email</h3>
               <p>nelsonmadileng57@gmail.com</p>
             </div>
             <div className="contact-card">
               <div className="contact-icon">
-                <i className="fa fa-whatsapp"></i>
+                <FaWhatsapp style={{ fontSize: '1.5rem', color: 'var(--accent)' }} />
               </div>
               <h3>WhatsApp</h3>
               <p>
@@ -78,45 +62,65 @@ const Contact = () => {
           <div className="contact-form-container">
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
+                <label htmlFor="fullName">Full Name</label>
                 <input
+                  id="fullName"
                   type="text"
                   name="fullName"
                   placeholder="Full Name"
-                  value={formData.fullName}
-                  onChange={handleInputChange}
                   required
+                />
+                <ValidationError 
+                  prefix="Full Name" 
+                  field="fullName"
+                  errors={state.errors}
                 />
               </div>
               <div className="form-group">
+                <label htmlFor="email">Email Address</label>
                 <input
-                  type="email"
+                  id="email"
+                  type="email" 
                   name="email"
                   placeholder="Email Address"
-                  value={formData.email}
-                  onChange={handleInputChange}
                   required
+                />
+                <ValidationError 
+                  prefix="Email" 
+                  field="email"
+                  errors={state.errors}
                 />
               </div>
               <div className="form-group">
+                <label htmlFor="subject">Subject</label>
                 <input
+                  id="subject"
                   type="text"
                   name="subject"
                   placeholder="Subject"
-                  value={formData.subject}
-                  onChange={handleInputChange}
+                />
+                <ValidationError 
+                  prefix="Subject" 
+                  field="subject"
+                  errors={state.errors}
                 />
               </div>
               <div className="form-group">
+                <label htmlFor="message">Your Message</label>
                 <textarea
+                  id="message"
                   name="message"
                   placeholder="Your Message"
-                  value={formData.message}
-                  onChange={handleInputChange}
                   required
-                ></textarea>
+                />
+                <ValidationError 
+                  prefix="Message" 
+                  field="message"
+                  errors={state.errors}
+                />
               </div>
-              <button type="submit" className="btn btn-primary contact-submit" disabled={isSubmitting}>
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+              <button type="submit" className="btn btn-primary contact-submit" disabled={state.submitting}>
+                {state.submitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>
