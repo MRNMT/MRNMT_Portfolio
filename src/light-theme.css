@@ -18,7 +18,7 @@
   --social-icon-hover: #000000;
   --card-bg: #ffffff;
   --border-color: rgba(0, 0, 0, 0.1);
-  --shadow-color: rgba(0, 0, 0, 0.3);
+  --shadow-color: rgba(0, 0, 0, 0.1);
   --font-family: 'Inter', sans-serif;
 }
 
@@ -49,4 +49,16 @@
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+/* Light Mode Override for Skills Grid */
+[data-theme="light"] .skills-grid {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .skills-grid:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }

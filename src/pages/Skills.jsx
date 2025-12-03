@@ -30,7 +30,7 @@ const Skills = () => {
                 <span style={{ color: 'var(--text-primary, #fff)' }}>{skill.name}</span>
                 <span style={{ color: 'var(--accent, #00d4ff)' }}>{skill.level}%</span>
               </div>
-              <div className="skill-bar" style={{ background: 'var(--bg-secondary, #2a2a2a)', height: '10px', borderRadius: '5px', overflow: 'hidden' }}>
+              <div className="skill-bar" style={{ background: 'var(--bg-secondary, #2a2a2a)', height: '10px', borderRadius: '5px', overflow: 'hidden', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
                 <motion.div
                   className="skill-progress"
                   initial={{ width: 0 }}
@@ -38,7 +38,7 @@ const Skills = () => {
                   transition={{ duration: 1.5, ease: 'easeOut' }}
                   style={{
                     height: '100%',
-                    background: 'linear-gradient(90deg, var(--accent, #00d4ff), #00b8d4)',
+                    background: 'var(--accent)',
                     borderRadius: '5px',
                   }}
                 />

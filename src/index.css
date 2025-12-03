@@ -157,6 +157,10 @@ a:hover {
   max-width: 1200px;
   margin: 0 auto;
   border-radius: 10px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background: rgba(10, 25, 47, 0.8);
+  border: 1px solid rgba(100, 255, 218, 0.2);
 }
 
 .hero-text {
@@ -933,6 +937,17 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  background: var(--section-bg);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(100, 255, 218, 0.1);
+  transition: all 0.3s ease;
+}
+
+.skills-grid:hover {
+  box-shadow: 0 8px 25px rgba(100, 255, 218, 0.2);
+  transform: translateY(-3px);
 }
 
 .skill-category {
@@ -1544,4 +1559,19 @@ img:hover {
 [data-theme="light"] .search-input:focus {
   border-color: #64ffda;
   box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.1);
+}
+
+/* About Section */
+.about-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(17, 34, 64, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Light Mode Override for About Section */
+[data-theme="light"] .about-section {
+  background: rgba(255, 255, 255, 0.8);
 }

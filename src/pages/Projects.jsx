@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import { useIntersectionObserver } from '../utils/animations';
 import ProjectModal from '../components/ProjectModal';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
   const sectionRef = useRef();
@@ -54,31 +55,54 @@ const Projects = () => {
   };
 
   return (
-    <main>
-      <section ref={sectionRef} className="section" id="projects">
-        <h2>Projects</h2>
-        <div className="projects-grid">
-          {projects.map((project) => (
-            <div
+    <motion.main
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.5 }}
+    >
+      <motion.section
+        ref={sectionRef}
+        className="section"
+        id="projects"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          Projects
+        </motion.h2>
+        <motion.div
+          className="projects-grid"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          {projects.map((project, index) => (
+            <motion.div
               key={project.id}
               className="project-card"
               onClick={() => openModal(project)}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05, rotate: 1, boxShadow: '0 10px 30px rgba(100, 255, 218, 0.3)' }}
+              whileTap={{ scale: 0.95 }}
               style={{
                 cursor: 'pointer',
                 background: 'var(--card-bg)',
                 padding: '1.5rem',
                 borderRadius: '10px',
                 marginBottom: '1rem',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                 border: '1px solid var(--border-color)',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-5px)';
-                e.currentTarget.style.boxShadow = '0 5px 15px rgba(0, 212, 255, 0.3)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = 'none';
               }}
             >
               {project.image && (
@@ -117,8 +141,8 @@ const Projects = () => {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                      className="btn btn-primary"
-                      style={{ padding: '0.5rem 1rem' }}
+                    className="btn btn-primary"
+                    style={{ padding: '0.5rem 1rem' }}
                   >
                     Live
                   </a>
@@ -128,19 +152,19 @@ const Projects = () => {
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                      className="btn btn-primary"
-                      style={{ padding: '0.5rem 1rem' }}
+                    className="btn btn-primary"
+                    style={{ padding: '0.5rem 1rem' }}
                   >
                     GitHub
                   </a>
                 )}
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
         <ProjectModal isOpen={isModalOpen} onClose={closeModal} project={selectedProject} />
-      </section>
-    </main>
+      </motion.section>
+    </motion.main>
   );
 };
 

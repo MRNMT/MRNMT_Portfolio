@@ -256,12 +256,18 @@ const Experience = () => {
   return (
     <main>
       <section ref={sectionRef} className="experience-section" id="experience">
-        <div className="experience-header">
+        <motion.div
+          className="experience-header"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           <h2 className="section-title">Professional Journey</h2>
           <p className="section-description">
             A timeline of my professional growth, achievements, and continuous learning in the world of technology.
           </p>
-        </div>
+        </motion.div>
 
         {/* Enhanced Stats Section */}
         <div className="stats-overview">

@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from 'react';
 import { useIntersectionObserver } from '../utils/animations';
+import { motion } from 'framer-motion';
 
 const About = () => {
   const sectionRef = useRef();
@@ -149,26 +150,23 @@ const About = () => {
             <div className="about-text">
               <h3>Who I Am</h3>
               <p>
-                I am a passionate full-stack engineer with experience in building scalable web applications and seamless user experiences.
-                Skilled in JavaScript, React, Node.js, Python, and more, I enjoy crafting efficient and elegant solutions to complex problems.
+                A passionate full-stack engineer with experience in building scalable web applications and seamless user experiences. Skilled in JavaScript, React, Node.js, Python, and more, I enjoy crafting efficient and elegant solutions to complex problems. Transforming pixelated, bite-sized components into seamless digital UI/UX.
               </p>
               <p>
-                With over 4 years of experience in web development, I have worked on diverse projects ranging from small business websites
-                to large-scale enterprise applications. I believe in writing clean, maintainable code and staying up-to-date with the latest
-                technologies and best practices.
+                Currently pursuing Computer Science at Tshwane University of Technology, I have gained hands-on experience through internships, hackathons, and personal projects. I believe in writing clean, maintainable code and staying up-to-date with the latest technologies and best practices.
               </p>
               <div className="about-stats">
                 <div className="stat">
-                  <span className="stat-number">50+</span>
+                  <span className="stat-number">3</span>
                   <span className="stat-label">Projects Completed</span>
                 </div>
                 <div className="stat">
-                  <span className="stat-number">4+</span>
+                  <span className="stat-number">3+</span>
                   <span className="stat-label">Years Experience</span>
                 </div>
                 <div className="stat">
-                  <span className="stat-number">15+</span>
-                  <span className="stat-label">Happy Clients</span>
+                  <span className="stat-number">3</span>
+                  <span className="stat-label">Hackathon Wins</span>
                 </div>
               </div>
             </div>
@@ -182,78 +180,350 @@ const About = () => {
           <div className="experience-section">
             <h3>Experience</h3>
             <div className="experience-timeline">
-              {experience.map((exp, index) => (
-                <div key={index} className="experience-item">
-                  <div className="experience-header">
-                    <h4>{exp.title}</h4>
-                    <span className="company">{exp.company}</span>
-                    <span className="period">{exp.period}</span>
-                  </div>
-                  <p className="experience-description">{exp.description}</p>
-                  <ul className="achievements">
-                    {exp.achievements.map((achievement, i) => (
-                      <li key={i}>{achievement}</li>
-                    ))}
-                  </ul>
+              <div className="experience-item">
+                <div className="experience-header">
+                  <h4>Full-Stack Developer Trainee & Intern</h4>
+                  <span className="company">CodeTribe Academy / mLab</span>
+                  <span className="period">2025 - 2026</span>
                 </div>
-              ))}
+                <p className="experience-description">Completing intensive full-stack development training at CodeTribe Academy, focusing on modern web technologies and software development best practices, followed by an internship at mLab starting July 1, 2025, contributing to innovative tech projects and gaining practical experience in software development until March 31, 2026.</p>
+                <ul className="achievements">
+                  <li>Developed responsive web applications using HTML, CSS, and JavaScript</li>
+                  <li>Built full-stack applications with React, Node.js, and MongoDB</li>
+                  <li>Implemented RESTful APIs and database integration</li>
+                  <li>Created responsive designs with modern CSS frameworks</li>
+                  <li>Collaborated on team projects using Git and Agile methodologies</li>
+                </ul>
+              </div>
+              <div className="experience-item">
+                <div className="experience-header">
+                  <h4>Second Place Winner</h4>
+                  <span className="company">LVH 2025 Hackathon</span>
+                  <span className="period">2025</span>
+                </div>
+                <p className="experience-description">Won second place in the LVH 2025 Hackathon (Limpopo Varsity Hackathon), which was my third hackathon participation, as a Computer Science student at Tshwane University of Technology. Demonstrated advanced skills in collaborative coding, problem-solving, and innovation under time constraints.</p>
+                <ul className="achievements">
+                  <li>Led a team to develop innovative solutions for given challenges</li>
+                  <li>Applied advanced programming skills in a competitive hackathon environment</li>
+                  <li>Demonstrated ability to work under pressure and meet deadlines</li>
+                  <li>Learned from peers and mentors in a fast-paced setting</li>
+                  <li>Achieved second place recognition for project excellence</li>
+                </ul>
+              </div>
+              <div className="experience-item">
+                <div className="experience-header">
+                  <h4>Hacker</h4>
+                  <span className="company">Telkom 10x Hackathon Polokwane</span>
+                  <span className="period">2025</span>
+                </div>
+                <p className="experience-description">Participated as a hacker in the Telkom 10x Hackathon held in Polokwane, showcasing skills in rapid prototyping and innovative problem-solving in a competitive environment.</p>
+                <ul className="achievements">
+                  <li>Developed innovative solutions for given challenges</li>
+                  <li>Applied programming skills in a competitive hackathon environment</li>
+                  <li>Demonstrated ability to work under pressure and meet deadlines</li>
+                  <li>Collaborated with team members on project development</li>
+                  <li>Learned from peers and mentors in a fast-paced setting</li>
+                </ul>
+              </div>
+              <div className="experience-item">
+                <div className="experience-header">
+                  <h4>Technical Support Specialist</h4>
+                  <span className="company">NEC XON</span>
+                  <span className="period">2022</span>
+                </div>
+                <p className="experience-description">Delivered comprehensive technical support for retail technology solutions at NEC XON, specializing in price tag installation and maintenance across enterprise environments. Gained hands-on experience with operational workflows and retail technology implementations.</p>
+                <ul className="achievements">
+                  <li>Led price tag installation projects with precision and efficiency across retail environments</li>
+                  <li>Provided technical support for retail technology solutions and POS systems</li>
+                  <li>Maintained operational excellence in fast-paced enterprise environments</li>
+                  <li>Collaborated with cross-functional teams to ensure seamless technology deployments</li>
+                  <li>Delivered comprehensive training and support to retail staff on new systems</li>
+                </ul>
+              </div>
+              <div className="experience-item">
+                <div className="experience-header">
+                  <h4>Participant</h4>
+                  <span className="company">TVH 22 Hackathon</span>
+                  <span className="period">2022</span>
+                </div>
+                <p className="experience-description">Participated in the TVH 22 Hackathon as a first-year Computer Science student at Tshwane University of Technology, gaining valuable experience in collaborative coding and problem-solving under time constraints.</p>
+                <ul className="achievements">
+                  <li>Collaborated with a team to develop innovative solutions for given challenges</li>
+                  <li>Applied programming skills in a competitive hackathon environment</li>
+                  <li>Demonstrated ability to work under pressure and meet deadlines</li>
+                  <li>Learned from peers and mentors in a fast-paced setting</li>
+                </ul>
+              </div>
             </div>
           </div>
 
           <div className="services-section">
             <h3>What I Do</h3>
             <p className="services-intro">
-              I offer a comprehensive range of web development and design services to help bring your ideas to life.
-              Each service is tailored to meet your specific needs and goals.
+              I offer a comprehensive range of web development and design services to help bring your ideas to life. Each service is tailored to meet your specific needs and goals.
             </p>
 
             <div className="services-grid">
-              {services.map(service => (
-                <div
-                  key={service.id}
-                  className={`service-card ${activeService === service.id ? 'active' : ''}`}
-                  onClick={() => setActiveService(activeService === service.id ? null : service.id)}
-                >
-                  <div className="service-header">
-                    <div className="service-icon">
-                      <i className={`fa ${service.icon}`}></i>
+              <div
+                className={`service-card ${activeService === 1 ? 'active' : ''}`}
+                onClick={() => setActiveService(activeService === 1 ? null : 1)}
+              >
+                <div className="service-header">
+                  <div className="service-icon">
+                    <i className="fa fa-code"></i>
+                  </div>
+                  <h4 className="service-title">Full-Stack Web Development</h4>
+                  <div className="service-toggle">
+                    <i className={`fa fa-chevron-${activeService === 1 ? 'up' : 'down'}`}></i>
+                  </div>
+                </div>
+                <p className="service-description">Building robust, scalable web applications using modern technologies like React, Node.js, and cloud platforms.</p>
+                {activeService === 1 && (
+                  <div className="service-details">
+                    <div className="service-features">
+                      <h5>What's Included:</h5>
+                      <ul>
+                        <li>Custom web application development</li>
+                        <li>API design and implementation</li>
+                        <li>Database architecture and optimization</li>
+                        <li>Performance optimization and SEO</li>
+                        <li>Responsive design for all devices</li>
+                      </ul>
                     </div>
-                    <h4 className="service-title">{service.title}</h4>
-                    <div className="service-toggle">
-                      <i className={`fa fa-chevron-${activeService === service.id ? 'up' : 'down'}`}></i>
+                    <div className="service-tech">
+                      <h5>Technologies:</h5>
+                      <div className="tech-tags">
+                        <span className="tech-tag">React</span>
+                        <span className="tech-tag">Node.js</span>
+                        <span className="tech-tag">Express</span>
+                        <span className="tech-tag">MongoDB</span>
+                        <span className="tech-tag">PostgreSQL</span>
+                        <span className="tech-tag">AWS</span>
+                      </div>
+                    </div>
+                    <div className="service-cta">
+                      <button className="btn btn-primary">Get Started</button>
+                      <button className="btn btn-outline">Learn More</button>
                     </div>
                   </div>
-
-                  <p className="service-description">{service.description}</p>
-
-                  {activeService === service.id && (
-                    <div className="service-details">
-                      <div className="service-features">
-                        <h5>What's Included:</h5>
-                        <ul>
-                          {service.features.map((feature, index) => (
-                            <li key={index}>{feature}</li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <div className="service-tech">
-                        <h5>Technologies:</h5>
-                        <div className="tech-tags">
-                          {service.technologies.map((tech, index) => (
-                            <span key={index} className="tech-tag">{tech}</span>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div className="service-cta">
-                        <button className="btn btn-primary">Get Started</button>
-                        <button className="btn btn-outline">Learn More</button>
+                )}
+              </div>
+              <div
+                className={`service-card ${activeService === 2 ? 'active' : ''}`}
+                onClick={() => setActiveService(activeService === 2 ? null : 2)}
+              >
+                <div className="service-header">
+                  <div className="service-icon">
+                    <i className="fa fa-palette"></i>
+                  </div>
+                  <h4 className="service-title">UI/UX Design</h4>
+                  <div className="service-toggle">
+                    <i className={`fa fa-chevron-${activeService === 2 ? 'up' : 'down'}`}></i>
+                  </div>
+                </div>
+                <p className="service-description">Creating intuitive, beautiful user interfaces that provide exceptional user experiences and drive engagement.</p>
+                {activeService === 2 && (
+                  <div className="service-details">
+                    <div className="service-features">
+                      <h5>What's Included:</h5>
+                      <ul>
+                        <li>User research and analysis</li>
+                        <li>Wireframing and prototyping</li>
+                        <li>Visual design and branding</li>
+                        <li>Usability testing and iteration</li>
+                        <li>Design system creation</li>
+                      </ul>
+                    </div>
+                    <div className="service-tech">
+                      <h5>Technologies:</h5>
+                      <div className="tech-tags">
+                        <span className="tech-tag">Figma</span>
+                        <span className="tech-tag">Adobe XD</span>
+                        <span className="tech-tag">Sketch</span>
+                        <span className="tech-tag">InVision</span>
+                        <span className="tech-tag">Principle</span>
                       </div>
                     </div>
-                  )}
+                    <div className="service-cta">
+                      <button className="btn btn-primary">Get Started</button>
+                      <button className="btn btn-outline">Learn More</button>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div
+                className={`service-card ${activeService === 3 ? 'active' : ''}`}
+                onClick={() => setActiveService(activeService === 3 ? null : 3)}
+              >
+                <div className="service-header">
+                  <div className="service-icon">
+                    <i className="fa fa-lightbulb"></i>
+                  </div>
+                  <h4 className="service-title">Technical Consulting</h4>
+                  <div className="service-toggle">
+                    <i className={`fa fa-chevron-${activeService === 3 ? 'up' : 'down'}`}></i>
+                  </div>
                 </div>
-              ))}
+                <p className="service-description">Providing expert guidance on technology choices, architecture decisions, and development best practices.</p>
+                {activeService === 3 && (
+                  <div className="service-details">
+                    <div className="service-features">
+                      <h5>What's Included:</h5>
+                      <ul>
+                        <li>Technology stack recommendations</li>
+                        <li>Code review and optimization</li>
+                        <li>Architecture planning and design</li>
+                        <li>Performance auditing</li>
+                        <li>Team training and mentoring</li>
+                      </ul>
+                    </div>
+                    <div className="service-tech">
+                      <h5>Technologies:</h5>
+                      <div className="tech-tags">
+                        <span className="tech-tag">JavaScript</span>
+                        <span className="tech-tag">Python</span>
+                        <span className="tech-tag">DevOps</span>
+                        <span className="tech-tag">Cloud Architecture</span>
+                        <span className="tech-tag">Agile</span>
+                      </div>
+                    </div>
+                    <div className="service-cta">
+                      <button className="btn btn-primary">Get Started</button>
+                      <button className="btn btn-outline">Learn More</button>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div
+                className={`service-card ${activeService === 4 ? 'active' : ''}`}
+                onClick={() => setActiveService(activeService === 4 ? null : 4)}
+              >
+                <div className="service-header">
+                  <div className="service-icon">
+                    <i className="fa fa-tasks"></i>
+                  </div>
+                  <h4 className="service-title">Project Management</h4>
+                  <div className="service-toggle">
+                    <i className={`fa fa-chevron-${activeService === 4 ? 'up' : 'down'}`}></i>
+                  </div>
+                </div>
+                <p className="service-description">Leading development projects from concept to deployment with efficient planning and execution.</p>
+                {activeService === 4 && (
+                  <div className="service-details">
+                    <div className="service-features">
+                      <h5>What's Included:</h5>
+                      <ul>
+                        <li>Project planning and scoping</li>
+                        <li>Timeline and milestone management</li>
+                        <li>Risk assessment and mitigation</li>
+                        <li>Stakeholder communication</li>
+                        <li>Quality assurance and testing</li>
+                      </ul>
+                    </div>
+                    <div className="service-tech">
+                      <h5>Technologies:</h5>
+                      <div className="tech-tags">
+                        <span className="tech-tag">Jira</span>
+                        <span className="tech-tag">Trello</span>
+                        <span className="tech-tag">Asana</span>
+                        <span className="tech-tag">Slack</span>
+                        <span className="tech-tag">Git</span>
+                        <span className="tech-tag">CI/CD</span>
+                      </div>
+                    </div>
+                    <div className="service-cta">
+                      <button className="btn btn-primary">Get Started</button>
+                      <button className="btn btn-outline">Learn More</button>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div
+                className={`service-card ${activeService === 5 ? 'active' : ''}`}
+                onClick={() => setActiveService(activeService === 5 ? null : 5)}
+              >
+                <div className="service-header">
+                  <div className="service-icon">
+                    <i className="fa fa-mobile-alt"></i>
+                  </div>
+                  <h4 className="service-title">Mobile App Development</h4>
+                  <div className="service-toggle">
+                    <i className={`fa fa-chevron-${activeService === 5 ? 'up' : 'down'}`}></i>
+                  </div>
+                </div>
+                <p className="service-description">Developing native and cross-platform mobile applications for iOS and Android devices.</p>
+                {activeService === 5 && (
+                  <div className="service-details">
+                    <div className="service-features">
+                      <h5>What's Included:</h5>
+                      <ul>
+                        <li>Native iOS/Android development</li>
+                        <li>Cross-platform solutions</li>
+                        <li>App store optimization</li>
+                        <li>Push notifications and analytics</li>
+                        <li>Offline functionality</li>
+                      </ul>
+                    </div>
+                    <div className="service-tech">
+                      <h5>Technologies:</h5>
+                      <div className="tech-tags">
+                        <span className="tech-tag">React Native</span>
+                        <span className="tech-tag">Flutter</span>
+                        <span className="tech-tag">Swift</span>
+                        <span className="tech-tag">Kotlin</span>
+                        <span className="tech-tag">Firebase</span>
+                      </div>
+                    </div>
+                    <div className="service-cta">
+                      <button className="btn btn-primary">Get Started</button>
+                      <button className="btn btn-outline">Learn More</button>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div
+                className={`service-card ${activeService === 6 ? 'active' : ''}`}
+                onClick={() => setActiveService(activeService === 6 ? null : 6)}
+              >
+                <div className="service-header">
+                  <div className="service-icon">
+                    <i className="fa fa-shopping-cart"></i>
+                  </div>
+                  <h4 className="service-title">E-commerce Solutions</h4>
+                  <div className="service-toggle">
+                    <i className={`fa fa-chevron-${activeService === 6 ? 'up' : 'down'}`}></i>
+                  </div>
+                </div>
+                <p className="service-description">Building secure, scalable e-commerce platforms with payment integration and inventory management.</p>
+                {activeService === 6 && (
+                  <div className="service-details">
+                    <div className="service-features">
+                      <h5>What's Included:</h5>
+                      <ul>
+                        <li>Custom e-commerce platforms</li>
+                        <li>Payment gateway integration</li>
+                        <li>Inventory and order management</li>
+                        <li>Customer portal development</li>
+                        <li>Analytics and reporting</li>
+                      </ul>
+                    </div>
+                    <div className="service-tech">
+                      <h5>Technologies:</h5>
+                      <div className="tech-tags">
+                        <span className="tech-tag">Shopify</span>
+                        <span className="tech-tag">WooCommerce</span>
+                        <span className="tech-tag">Stripe</span>
+                        <span className="tech-tag">PayPal</span>
+                        <span className="tech-tag">BigCommerce</span>
+                      </div>
+                    </div>
+                    <div className="service-cta">
+                      <button className="btn btn-primary">Get Started</button>
+                      <button className="btn btn-outline">Learn More</button>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
