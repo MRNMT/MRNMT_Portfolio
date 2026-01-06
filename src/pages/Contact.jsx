@@ -34,21 +34,21 @@ const Contact = () => {
           <div className="contact-info">
             <div className="contact-card">
               <div className="contact-icon">
-                <FaPhone style={{ fontSize: '1.5rem', color: 'var(--accent)' }} />
+                <FaPhone />
               </div>
               <h3>Phone</h3>
               <p>+27 764 694 671</p>
             </div>
             <div className="contact-card">
               <div className="contact-icon">
-                <FaEnvelope style={{ fontSize: '1.5rem', color: 'var(--accent)' }} />
+                <FaEnvelope />
               </div>
               <h3>Email</h3>
               <p>nelsonmadileng57@gmail.com</p>
             </div>
             <div className="contact-card">
               <div className="contact-icon">
-                <FaWhatsapp style={{ fontSize: '1.5rem', color: 'var(--accent)' }} />
+                <FaWhatsapp />
               </div>
               <h3>WhatsApp</h3>
               <p>
