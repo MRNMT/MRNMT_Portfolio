@@ -94,15 +94,8 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.05, rotate: 1, boxShadow: '0 10px 30px rgba(100, 255, 218, 0.3)' }}
-              whileTap={{ scale: 0.95 }}
-              style={{
-                cursor: 'pointer',
-                background: 'var(--card-bg)',
-                padding: '1.5rem',
-                borderRadius: '10px',
-                border: '1px solid var(--border-color)',
-              }}
+              whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+              whileTap={{ scale: 0.98 }}
             >
               {project.image && (
                 <img
