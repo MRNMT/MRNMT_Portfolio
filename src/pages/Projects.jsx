@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useState } from 'react';
 import { useIntersectionObserver } from '../utils/animations';
 import ProjectModal from '../components/ProjectModal';
 import { motion } from 'framer-motion';

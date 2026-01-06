@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import { useIntersectionObserver } from '../utils/animations';
 
 const Privacy = () => {
@@ -23,7 +23,7 @@ const Privacy = () => {
       <footer className="footer">
         <a href="/privacy">Privacy Policy</a> |
         <a href="/contact">Contact Us</a>
-        <p>&copy; 2025 Nelson Mafape Tshwarelo Madileng (MRNMT). All rights reserved.</p>
+        <p>&copy; 2025 Nelson Mafape Tshwarelo Madileng (MR NMT). All rights reserved.</p>
       </footer>
     </main>
   );

@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import { useTheme } from '../hooks/useTheme';
+
 
 const Footer = () => {
-  const theme = useTheme();
+
 
   return (
     <footer className="footer" style={{
@@ -15,20 +15,8 @@ const Footer = () => {
     }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', marginBottom: '1rem' }}>
-          <div className="logo" style={{
-            backgroundColor: 'var(--accent, #64ffda)',
-            color: 'var(--background, #0a192f)',
-            fontWeight: '700',
-            fontSize: '1.5rem',
-            width: '40px',
-            height: '40px',
-            borderRadius: '50%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            fontFamily: 'monospace',
-          }}>
-            MRNMT
+          <div className="logo">
+            MR NMT
           </div>
           <div className="social-links" style={{ display: 'flex', gap: '1rem' }}>
             <a href="https://github.com/MRNMT" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{ color: 'var(--text-secondary, #8892b0)', fontSize: '1.5rem', transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.target.style.color = 'var(--accent, #64ffda)'} onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary, #8892b0)'}>
@@ -52,7 +40,7 @@ const Footer = () => {
             <li><Link to="/contact" style={{ color: 'var(--text-secondary, #8892b0)', textDecoration: 'none', transition: 'color 0.3s ease' }} onMouseEnter={(e) => e.target.style.color = 'var(--accent, #64ffda)'} onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary, #8892b0)'}>Contact</Link></li>
           </ul>
         </nav>
-        <p style={{ margin: 0, fontSize: '0.9rem' }}>&copy; 2025 Nelson Mafape Tshwarelo Madileng (MRNMT). All rights reserved.</p>
+        <p style={{ margin: 0, fontSize: '0.9rem' }}>&copy; 2025 Nelson Mafape Tshwarelo Madileng (MR NMT). All rights reserved.</p>
       </div>
     </footer>
   );

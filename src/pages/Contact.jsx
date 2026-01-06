@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import { useIntersectionObserver } from '../utils/animations';
 import { useForm, ValidationError } from '@formspree/react';
 import { FaPhone, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
@@ -70,8 +70,8 @@ const Contact = () => {
                   placeholder="Full Name"
                   required
                 />
-                <ValidationError 
-                  prefix="Full Name" 
+                <ValidationError
+                  prefix="Full Name"
                   field="fullName"
                   errors={state.errors}
                 />
@@ -80,13 +80,13 @@ const Contact = () => {
                 <label htmlFor="email">Email Address</label>
                 <input
                   id="email"
-                  type="email" 
+                  type="email"
                   name="email"
                   placeholder="Email Address"
                   required
                 />
-                <ValidationError 
-                  prefix="Email" 
+                <ValidationError
+                  prefix="Email"
                   field="email"
                   errors={state.errors}
                 />
@@ -99,8 +99,8 @@ const Contact = () => {
                   name="subject"
                   placeholder="Subject"
                 />
-                <ValidationError 
-                  prefix="Subject" 
+                <ValidationError
+                  prefix="Subject"
                   field="subject"
                   errors={state.errors}
                 />
@@ -113,8 +113,8 @@ const Contact = () => {
                   placeholder="Your Message"
                   required
                 />
-                <ValidationError 
-                  prefix="Message" 
+                <ValidationError
+                  prefix="Message"
                   field="message"
                   errors={state.errors}
                 />

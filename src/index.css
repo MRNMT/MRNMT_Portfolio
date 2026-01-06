@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --background: #0a192f;
   --text-primary: #ccd6f6;
@@ -21,6 +27,11 @@
   --font-family: 'Inter', sans-serif;
 }
 
+html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 body {
   margin: 0;
   font-family: var(--font-family);
@@ -31,6 +42,8 @@ body {
   background-attachment: fixed;
   color: var(--text-primary);
   line-height: 1.6;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* App Parallax Background */
@@ -62,25 +75,41 @@ a:hover {
   background: rgba(17, 34, 64, 0.8);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  padding: 1rem 2rem;
+  padding: 0.75rem 1.5rem;
   position: sticky;
   top: 0;
   z-index: 1000;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .logo {
   background-color: var(--accent);
   color: var(--background);
   font-weight: 700;
-  font-size: 1.5rem;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: monospace;
-  cursor: default;
+  cursor: pointer;
+  width: fit-content;
+  height: auto;
+  min-width: 40px;
+}
+
+.logo a {
+  color: var(--background);
+  text-decoration: none;
 }
 
 .nav-links {
@@ -124,6 +153,7 @@ a:hover {
   font-weight: 600;
   display: inline-block;
 }
+
 .btn-primary {
   background-color: var(--button-bg);
   color: var(--accent);
@@ -206,8 +236,8 @@ a:hover {
 }
 
 .hero-image {
-  flex: 1 1 300px;
-  max-width: 400px;
+  flex: 1 1 280px;
+  max-width: 350px;
   text-align: center;
 }
 
@@ -412,59 +442,7 @@ a:hover {
   cursor: not-allowed;
 }
 
-@media (max-width: 768px) {
-  .contact-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
 
-  .contact-section {
-    padding: 2rem 1rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .contact-card {
-    padding: 1.5rem;
-  }
-
-  .contact-form-container {
-    padding: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    padding: 2rem 1rem;
-  }
-
-  .hero-text,
-  .hero-image {
-    max-width: 100%;
-  }
-
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .nav-links.active {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--nav-bg);
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 1rem;
-    border-radius: 8px;
-  }
-}
 
 /* Section fade-in animation */
 .section {
@@ -480,13 +458,27 @@ a:hover {
 
 /* Animations */
 @keyframes fadeInLeft {
-  from { opacity: 0; transform: translateX(-20px); }
-  to { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes fadeInRight {
-  from { opacity: 0; transform: translateX(20px); }
-  to { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .hero-text {
@@ -510,11 +502,15 @@ a:hover {
   transform: translateY(0);
 }
 
-.btn, .btn-primary, .btn-outline {
+.btn,
+.btn-primary,
+.btn-outline {
   transition: all 0.3s ease;
 }
 
-.btn:hover, .btn-primary:hover, .btn-outline:hover {
+.btn:hover,
+.btn-primary:hover,
+.btn-outline:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
@@ -635,20 +631,6 @@ a:hover {
   font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
-  .experience-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .reference-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .experience-card {
-    padding: 1.5rem;
-  }
-}
 
 /* Experience Section */
 .experience-section {
@@ -1217,8 +1199,107 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+
+  /* Contact Section */
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-section {
+    padding: 2rem 1rem;
+  }
+
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  .contact-form-container {
+    padding: 1.5rem;
+  }
+
+  /* Hero Section */
+  .hero {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .hero-text,
+  .hero-image {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  /* Navigation */
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex !important;
+  }
+
+  .logo {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .navbar .social-links,
+  .navbar-actions .social-links {
+    display: none !important;
+  }
+
+  .navbar-actions .btn-primary {
+    display: none;
+  }
+
+  .navbar-actions .btn {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.7rem;
+  }
+
+  /* Hero Section Fixes */
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  /* Experience Section */
   .experience-section {
     padding: 2rem 1rem;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .reference-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-card {
+    padding: 1.5rem;
   }
 
   .section-title {
@@ -1242,6 +1323,7 @@ a:hover {
     font-size: 2.5rem;
   }
 
+  /* Timeline */
   .timeline-line {
     left: 20px;
   }
@@ -1275,6 +1357,7 @@ a:hover {
     font-size: 1.2rem;
   }
 
+  /* Skills */
   .skills-grid {
     grid-template-columns: 1fr;
   }
@@ -1283,6 +1366,7 @@ a:hover {
     padding: 1.5rem;
   }
 
+  /* Projects */
   .projects-grid {
     grid-template-columns: 1fr;
   }
@@ -1291,6 +1375,7 @@ a:hover {
     padding: 1.5rem;
   }
 
+  /* Footer */
   .footer {
     padding: 2rem 1rem 1rem;
   }
@@ -1324,8 +1409,13 @@ img:hover {
 }
 
 @keyframes loading {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 /* Enhanced Carousel Styles */

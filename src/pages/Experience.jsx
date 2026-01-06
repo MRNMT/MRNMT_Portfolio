@@ -3,6 +3,32 @@ import { useIntersectionObserver } from '../utils/animations';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FaProjectDiagram, FaTrophy, FaMedal, FaArrowRight } from 'react-icons/fa';
+import PropTypes from 'prop-types';
+
+const AnimatedCounter = ({ end, duration = 2000, visible }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!visible) return;
+
+    let startTime = null;
+    const animate = (currentTime) => {
+      if (startTime === null) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      setCount(Math.floor(progress * end));
+      if (progress < 1) requestAnimationFrame(animate);
+    };
+    requestAnimationFrame(animate);
+  }, [visible, end, duration]);
+
+  return <span>{count}</span>;
+};
+
+AnimatedCounter.propTypes = {
+  end: PropTypes.number.isRequired,
+  duration: PropTypes.number,
+  visible: PropTypes.bool.isRequired,
+};
 
 const Experience = () => {
   const sectionRef = useRef();
@@ -26,24 +52,7 @@ const Experience = () => {
     setExpandedItems(newExpanded);
   };
 
-  const AnimatedCounter = ({ end, duration = 2000 }) => {
-    const [count, setCount] = useState(0);
 
-    useEffect(() => {
-      if (!countersVisible) return;
-
-      let startTime = null;
-      const animate = (currentTime) => {
-        if (startTime === null) startTime = currentTime;
-        const progress = Math.min((currentTime - startTime) / duration, 1);
-        setCount(Math.floor(progress * end));
-        if (progress < 1) requestAnimationFrame(animate);
-      };
-      requestAnimationFrame(animate);
-    }, [countersVisible, end, duration]);
-
-    return <span>{count}</span>;
-  };
 
   const experiences = [
     {
@@ -125,29 +134,21 @@ const Experience = () => {
       ]
     },
     {
-      company: 'NEC XON',
+      company: 'NEC XON Retail Solution',
       role: 'Technical Support Specialist',
       year: '2022',
       type: 'experience',
-      description: 'Delivered comprehensive technical support for retail technology solutions at NEC XON, specializing in price tag installation and maintenance across enterprise environments.',
+      description: 'Specialized in the installation and maintenance of retail technology solutions, including rails, ESL tags, and supporting infrastructure.',
       responsibilities: [
-        'Led price tag installation projects with precision and efficiency',
-        'Provided technical support for retail technology solutions and POS systems',
-        'Maintained operational excellence in fast-paced enterprise environments',
-        'Collaborated with cross-functional teams to ensure seamless technology deployments',
-        'Delivered comprehensive training and support to retail staff'
+        'Installing of rails, ESL tags and infrastructure'
       ],
       skills: [
-        'Retail technology systems and POS solutions',
-        'Hardware installation and configuration',
-        'Technical troubleshooting and support',
-        'Customer service and training delivery',
-        'Project coordination and team collaboration'
+        'ESL Tags Installation',
+        'Infrastructure Deployment',
+        'Hardware installation and configuration'
       ],
       achievements: [
-        'Successfully completed multiple installation projects',
-        'Received positive feedback from clients',
-        'Developed strong technical support skills'
+        'Successfully completed installation projects'
       ],
       references: [
         { name: 'Joel Phatlane', contact: '078 389 3087' },
@@ -284,7 +285,7 @@ const Experience = () => {
               </div>
               <div className="stat-content">
                 <div className="stat-number">
-                  <AnimatedCounter end={15} />
+                  <AnimatedCounter end={15} visible={countersVisible} />
                   <span>+</span>
                 </div>
                 <div className="stat-label">Projects Completed</div>
@@ -302,7 +303,7 @@ const Experience = () => {
               </div>
               <div className="stat-content">
                 <div className="stat-number">
-                  <AnimatedCounter end={3} />
+                  <AnimatedCounter end={3} visible={countersVisible} />
                 </div>
                 <div className="stat-label">Hackathons Participated</div>
               </div>
@@ -319,7 +320,7 @@ const Experience = () => {
               </div>
               <div className="stat-content">
                 <div className="stat-number">
-                  <AnimatedCounter end={1} />
+                  <AnimatedCounter end={1} visible={countersVisible} />
                 </div>
                 <div className="stat-label">Hackathon Win</div>
               </div>

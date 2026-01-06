@@ -21,9 +21,6 @@ const Navbar = () => {
 
   return (
     <header className="navbar">
-      <div className="logo">
-        <Link to="/" onClick={closeMobileMenu}>MRNMT</Link>
-      </div>
       <button
         className="hamburger"
         onClick={toggleMobileMenu}
@@ -34,13 +31,15 @@ const Navbar = () => {
           flexDirection: 'column',
           cursor: 'pointer',
           padding: '0.5rem',
-          '@media (max-width: 768px)': { display: 'flex' },
         }}
       >
         <span style={{ width: '25px', height: '3px', background: 'var(--text-primary, #fff)', margin: '3px 0', transition: '0.3s' }}></span>
         <span style={{ width: '25px', height: '3px', background: 'var(--text-primary, #fff)', margin: '3px 0', transition: '0.3s' }}></span>
         <span style={{ width: '25px', height: '3px', background: 'var(--text-primary, #fff)', margin: '3px 0', transition: '0.3s' }}></span>
       </button>
+      <div className="logo">
+        <Link to="/" onClick={closeMobileMenu}>MR NMT</Link>
+      </div>
       <nav className="nav-desktop">
         <ul className="nav-links">
           <li><NavLink to="/" end onClick={closeMobileMenu}>Home</NavLink></li>
@@ -66,10 +65,9 @@ const Navbar = () => {
               top: '100%',
               left: 0,
               right: 0,
-              background: 'var(--bg-primary, #0a0a0a)',
+              background: 'var(--nav-bg, #112240)',
               borderTop: '1px solid var(--border-color, #333)',
               zIndex: 999,
-              '@media (min-width: 769px)': { display: 'none' },
             }}
           >
             <ul className="nav-links-mobile" style={{ listStyle: 'none', padding: '1rem 0', margin: 0 }}>

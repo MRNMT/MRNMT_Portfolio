@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useState } from 'react';
 import { useIntersectionObserver } from '../utils/animations';
 
 const Services = () => {

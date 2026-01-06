@@ -1,37 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+const testimonials = [
+  {
+    id: 1,
+    name: 'John Doe',
+    role: 'Senior Developer at TechCorp',
+    message: 'Nelson\'s work on our project was outstanding. His full-stack skills and attention to detail made the difference.',
+    image: 'https://via.placeholder.com/80x80?text=JD',
+  },
+  {
+    id: 2,
+    name: 'Jane Smith',
+    role: 'Product Manager at Innovate Inc.',
+    message: 'Exceptional collaborator with strong problem-solving abilities. Highly recommend for any development team.',
+    image: 'https://via.placeholder.com/80x80?text=JS',
+  },
+  {
+    id: 3,
+    name: 'Mike Johnson',
+    role: 'CTO at StartupX',
+    message: 'Nelson delivered high-quality code on time and exceeded expectations. A true professional.',
+    image: 'https://via.placeholder.com/80x80?text=MJ',
+  },
+];
+
 const TestimonialsCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [autoSlide, setAutoSlide] = useState(true);
 
-  const testimonials = [
-    {
-      id: 1,
-      name: 'John Doe',
-      role: 'Senior Developer at TechCorp',
-      message: 'Nelson\'s work on our project was outstanding. His full-stack skills and attention to detail made the difference.',
-      image: 'https://via.placeholder.com/80x80?text=JD',
-    },
-    {
-      id: 2,
-      name: 'Jane Smith',
-      role: 'Product Manager at Innovate Inc.',
-      message: 'Exceptional collaborator with strong problem-solving abilities. Highly recommend for any development team.',
-      image: 'https://via.placeholder.com/80x80?text=JS',
-    },
-    {
-      id: 3,
-      name: 'Mike Johnson',
-      role: 'CTO at StartupX',
-      message: 'Nelson delivered high-quality code on time and exceeded expectations. A true professional.',
-      image: 'https://via.placeholder.com/80x80?text=MJ',
-    },
-  ];
-
-  const nextSlide = () => {
+  const nextSlide = React.useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-  };
+  }, []);
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
@@ -47,7 +47,7 @@ const TestimonialsCarousel = () => {
       const interval = setInterval(nextSlide, 5000);
       return () => clearInterval(interval);
     }
-  }, [currentIndex, autoSlide]);
+  }, [autoSlide, nextSlide]);
 
   return (
     <div className="testimonials-carousel" style={{

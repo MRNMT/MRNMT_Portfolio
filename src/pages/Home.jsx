@@ -12,12 +12,13 @@ const Home = () => {
       <motion.section
         className="parallax-hero"
         style={{
-          height: '100vh',
+          minHeight: '100vh',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           position: 'relative',
           zIndex: 2,
+          paddingTop: '80px',
         }}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}

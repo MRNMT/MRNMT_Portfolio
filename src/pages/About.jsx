@@ -1,6 +1,5 @@
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useState } from 'react';
 import { useIntersectionObserver } from '../utils/animations';
-import { motion } from 'framer-motion';
 
 const About = () => {
   const sectionRef = useRef();
@@ -12,128 +11,9 @@ const About = () => {
     }
   });
 
-  const services = [
-    {
-      id: 1,
-      title: 'Full-Stack Web Development',
-      icon: 'fa-code',
-      description: 'Building robust, scalable web applications using modern technologies like React, Node.js, and cloud platforms.',
-      features: [
-        'Custom web application development',
-        'API design and implementation',
-        'Database architecture and optimization',
-        'Performance optimization and SEO',
-        'Responsive design for all devices'
-      ],
-      technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'AWS']
-    },
-    {
-      id: 2,
-      title: 'UI/UX Design',
-      icon: 'fa-palette',
-      description: 'Creating intuitive, beautiful user interfaces that provide exceptional user experiences and drive engagement.',
-      features: [
-        'User research and analysis',
-        'Wireframing and prototyping',
-        'Visual design and branding',
-        'Usability testing and iteration',
-        'Design system creation'
-      ],
-      technologies: ['Figma', 'Adobe XD', 'Sketch', 'InVision', 'Principle']
-    },
-    {
-      id: 3,
-      title: 'Technical Consulting',
-      icon: 'fa-lightbulb',
-      description: 'Providing expert guidance on technology choices, architecture decisions, and development best practices.',
-      features: [
-        'Technology stack recommendations',
-        'Code review and optimization',
-        'Architecture planning and design',
-        'Performance auditing',
-        'Team training and mentoring'
-      ],
-      technologies: ['JavaScript', 'Python', 'DevOps', 'Cloud Architecture', 'Agile']
-    },
-    {
-      id: 4,
-      title: 'Project Management',
-      icon: 'fa-tasks',
-      description: 'Leading development projects from concept to deployment with efficient planning and execution.',
-      features: [
-        'Project planning and scoping',
-        'Timeline and milestone management',
-        'Risk assessment and mitigation',
-        'Stakeholder communication',
-        'Quality assurance and testing'
-      ],
-      technologies: ['Jira', 'Trello', 'Asana', 'Slack', 'Git', 'CI/CD']
-    },
-    {
-      id: 5,
-      title: 'Mobile App Development',
-      icon: 'fa-mobile-alt',
-      description: 'Developing native and cross-platform mobile applications for iOS and Android devices.',
-      features: [
-        'Native iOS/Android development',
-        'Cross-platform solutions',
-        'App store optimization',
-        'Push notifications and analytics',
-        'Offline functionality'
-      ],
-      technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Firebase']
-    },
-    {
-      id: 6,
-      title: 'E-commerce Solutions',
-      icon: 'fa-shopping-cart',
-      description: 'Building secure, scalable e-commerce platforms with payment integration and inventory management.',
-      features: [
-        'Custom e-commerce platforms',
-        'Payment gateway integration',
-        'Inventory and order management',
-        'Customer portal development',
-        'Analytics and reporting'
-      ],
-      technologies: ['Shopify', 'WooCommerce', 'Stripe', 'PayPal', 'BigCommerce']
-    }
-  ];
 
-  const experience = [
-    {
-      title: 'Senior Full-Stack Developer',
-      company: 'Tech Solutions Inc.',
-      period: '2022 - Present',
-      description: 'Leading development of enterprise web applications, mentoring junior developers, and implementing best practices for scalable architecture.',
-      achievements: [
-        'Improved application performance by 40%',
-        'Led a team of 5 developers',
-        'Implemented CI/CD pipelines'
-      ]
-    },
-    {
-      title: 'Full-Stack Developer',
-      company: 'Digital Innovations Ltd.',
-      period: '2020 - 2022',
-      description: 'Developed and maintained multiple client projects using React, Node.js, and cloud technologies.',
-      achievements: [
-        'Delivered 15+ successful projects',
-        'Reduced development time by 30%',
-        'Implemented automated testing'
-      ]
-    },
-    {
-      title: 'Junior Developer',
-      company: 'WebCraft Studios',
-      period: '2019 - 2020',
-      description: 'Focused on front-end development and learning modern web technologies.',
-      achievements: [
-        'Built responsive web applications',
-        'Collaborated on team projects',
-        'Learned React and Node.js'
-      ]
-    }
-  ];
+
+
 
   return (
     <main>
@@ -228,16 +108,12 @@ const About = () => {
               <div className="experience-item">
                 <div className="experience-header">
                   <h4>Technical Support Specialist</h4>
-                  <span className="company">NEC XON</span>
+                  <span className="company">NEC XON Retail Solution</span>
                   <span className="period">2022</span>
                 </div>
-                <p className="experience-description">Delivered comprehensive technical support for retail technology solutions at NEC XON, specializing in price tag installation and maintenance across enterprise environments. Gained hands-on experience with operational workflows and retail technology implementations.</p>
+                <p className="experience-description">Specialized in the installation and maintenance of retail technology solutions at NEC XON Retail Solution. Gained hands-on experience with hardware infrastructure deployments.</p>
                 <ul className="achievements">
-                  <li>Led price tag installation projects with precision and efficiency across retail environments</li>
-                  <li>Provided technical support for retail technology solutions and POS systems</li>
-                  <li>Maintained operational excellence in fast-paced enterprise environments</li>
-                  <li>Collaborated with cross-functional teams to ensure seamless technology deployments</li>
-                  <li>Delivered comprehensive training and support to retail staff on new systems</li>
+                  <li>Installing of rails, ESL tags and infrastructure</li>
                 </ul>
               </div>
               <div className="experience-item">
